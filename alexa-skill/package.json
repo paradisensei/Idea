@@ -1,0 +1,9 @@
+{
+  "name": "idea-alexa-skill",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ask-sdk": "^2.0.0",
+    "mongodb": "^3.1.10"
+  }
+}

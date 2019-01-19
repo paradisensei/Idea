@@ -1,0 +1,11 @@
+{
+  "name": "idea-alice-skill",
+	"version": "1.0.0",
+  "scripts": {
+    "start": "micro"
+  },
+  "dependencies": {
+    "micro": "^9.1.0",
+    "mongodb": "^3.1.10"
+  }
+}
