@@ -16,7 +16,7 @@ const LaunchHandler = {
     const speechOutput = 'Welcome to Idea box! You can say inspire me and I will give you a fresh new idea!'
     return handlerInput.responseBuilder
       .speak(speechOutput)
-      .reprompt(speechOutput)
+      .reprompt(HELP_MESSAGE)
       .withSimpleCard(SKILL_NAME, speechOutput)
       .getResponse();
   },
@@ -29,10 +29,10 @@ const GetNewIdeaHandler = {
       && request.intent.name === 'GetNewIdeaIntent';
   },
   handle(handlerInput) {
-    const speechOutput = getRandomIdea();
+    const speechOutput = getRandomIdea() + '. Would you like another idea?';
     return handlerInput.responseBuilder
       .speak(speechOutput)
-      .reprompt('Would you like another idea?')
+      .reprompt(HELP_MESSAGE)
       .withSimpleCard(SKILL_NAME, speechOutput)
       .getResponse();
   },
@@ -105,7 +105,6 @@ const ErrorHandler = {
 
     return handlerInput.responseBuilder
       .speak('Sorry, an error occurred.')
-      .reprompt('Sorry, an error occurred.')
       .getResponse();
   },
 };
